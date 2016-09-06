@@ -7,4 +7,8 @@ public class Animal {
     void walk(){
         System.out.println("I am walking");
     }
+    
+    void bird(){
+        System.out.println("I am Bird");
+    }
 }
