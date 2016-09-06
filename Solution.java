@@ -3,11 +3,16 @@ package Module_3;
 /**
  * Created by admin-pc on 04.09.2016.
  */
-public class Solution {
+public class solution {
     public static void main(String[] argc){
-        System.out.println("I am walking");
-        System.out.println("I am flying");
-        System.out.println("I am singing");
-        System.out.println("I am Bird");
+        animal bird = new animal();
+        bird sing = new bird();
+        bird fly = new bird();
+        animal walk = new animal();
+        System.out.println(walk);
+        System.out.println(fly);
+        System.out.println(sing);
+        System.out.println(bird);
+
     }
 }
