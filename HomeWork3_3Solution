@@ -7,24 +7,21 @@ import java.util.Date;
  */
 public class Solution {
     public static void main(String[] argc){
-        Course course = new Course();
-        Student student = new Student();
-        CollegeStudent collegeStudent = new CollegeStudent();
-        SpecialStudent specialStudent = new SpecialStudent();
+        Course startDate = new Course();
+        Course teacherName = new Course();
+        Course name = new Course();
+        Course hoursDuration = new Course();
 
-        final Date startDate = course.startDate;
-        final String name = course.name;
-        final String teacherNane  = course.teacherName;
-        final int hoursDuration = course.hoursDuration;
-        final Course[] coursesTaken = student.coursesTaken;
-        final String firstName = student.firstName;
-        final String lastName = student.lastName;
-        final int group = student.group;
-        final String collegeName = collegeStudent.collegeName;
-        final int raiting = collegeStudent.raiting;
-        final long id = collegeStudent.id;
-        final long secretKey = specialStudent.secretKey;
-        final String email = specialStudent.email;
+        Student coursesTaken  = new Student();
+        Student firstName = new Student();
+        Student lastName = new Student();
+        Student group = new Student();
 
+        CollegeStudent collegeName = new CollegeStudent();
+        CollegeStudent rating = new CollegeStudent();
+        CollegeStudent id = new CollegeStudent();
+
+        SpecialStudent secretKey = new SpecialStudent();
+        SpecialStudent email = new SpecialStudent();
     }
 }
