@@ -16,9 +16,13 @@ public class SpecialStudent extends CollegeStudent {
         this.coursesTaken = coursesTaken;
     }
 
-    SpecialStudent((String firstName, String lastName, int group) {
+    SpecialStudent(String firstName, String lastName, int group) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.group = group;
+    }
+
+    public SpecialStudent() {
+
     }
 }
