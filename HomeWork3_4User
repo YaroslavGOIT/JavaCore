@@ -26,12 +26,64 @@ public class User {
         }
     }
 
-    void companyNameLenfht(){
+    int companyNameLenfht(){
         String name = " Company ";
         companyName = name;
+        return companyName.length();
     }
 
     void monthIncreaser(int addMonth){
         monthsOfEmployment += addMonth;
+    }
+
+    public User( String name, int balance, int monthsOfEmployment, String companyName, int salary, String currency){
+
+    }
+
+    void setName(String name) {
+        this.name = name;
+    }
+
+    String getName() {
+        return name;
+    }
+    void balance(int balance) {
+        this.balance = balance;
+    }
+
+    int getBalance() {
+        return balance;
+    }
+
+    void setMonthsOfEmployment(int monthsOfEmployment){
+        this.monthsOfEmployment = monthsOfEmployment;
+    }
+
+    int getMonthsOfEmployment(){
+        return monthsOfEmployment;
+    }
+
+    void setCompanyName(String companyName){
+        this.companyName = companyName;
+    }
+
+    int getCompanyName(){
+        return companyName.length();
+    }
+
+    void setSalary(int salary){
+        this.salary = salary;
+    }
+
+    int getSalary(){
+        return salary;
+    }
+
+    void setCurrency(String currency){
+        this.currency = currency;
+    }
+
+    int getCurrency(){
+        return currency.length();
     }
 }
