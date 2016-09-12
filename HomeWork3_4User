@@ -27,8 +27,6 @@ public class User {
     }
 
     int companyNameLenfht(){
-        String name = " Company ";
-        companyName = name;
         return companyName.length();
     }
 
@@ -36,8 +34,13 @@ public class User {
         monthsOfEmployment += addMonth;
     }
 
-    public User( String name, int balance, int monthsOfEmployment, String companyName, int salary, String currency){
-
+    public User(String name, int balance, int monthsOfEmployment, String companyName, int salary, String currency){
+        this.name = name;
+        this.balance = balance;
+        this.monthsOfEmployment = monthsOfEmployment;
+        this.companyName = companyName;
+        this.salary = salary;
+        this.currency = currency;
     }
 
     void setName(String name) {
