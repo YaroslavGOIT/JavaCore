@@ -1,9 +1,7 @@
 package Module_4;
 
 public class ChinaBank extends Bank {
-    {
-     public ChinaBank( long id, Currency currency,int numberOfEmployee, double avrSalaryOfEmploee, long rating,
-        long totalCapital){
+     public ChinaBank(long id, Currency currency,int numberOfEmployee, double avrSalaryOfEmploee, long rating, long totalCapital){
         super(id, currency, numberOfEmployee, avrSalaryOfEmploee, rating, totalCapital);
     }
 
@@ -44,9 +42,9 @@ public class ChinaBank extends Bank {
             else commision = 110;
 
         }
-        return commision;
+            return commision;
+        }
     }
-    }}
 
 
 
