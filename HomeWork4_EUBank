@@ -1,7 +1,7 @@
 package Module_4;
 
     public class EUBank extends Bank {
-        public EUBank(long id, currency, Currency eur, int numberOfEmployee, double avrSalaryOfEmploee, long rating, long totalCapital) {
+        public EUBank(long id, Currency currency, Currency eur, int numberOfEmployee, double avrSalaryOfEmploee, long rating, long totalCapital) {
             super(id, currency, numberOfEmployee, avrSalaryOfEmploee, rating, totalCapital);
         }
 
