@@ -1,5 +1,7 @@
 package Module_4;
 
+import static Module_4.Currency.USD;
+
 public class ChinaBank extends Bank {
      public ChinaBank(long id, Currency currency,int numberOfEmployee, double avrSalaryOfEmploee, long rating, long totalCapital){
         super(id, currency, numberOfEmployee, avrSalaryOfEmploee, rating, totalCapital);
@@ -9,7 +11,7 @@ public class ChinaBank extends Bank {
         @Override
         int getLimitOfWithdrawal () {
         short limitW = 0;
-        if (this.getCurrency() .equals(Currency.USD)) limitW = 100;
+        if (this.getCurrency() .equals(USD)) limitW = 100;
         if (this.getCurrency() .equals(Currency.EUR)) limitW = 150;
         return limitW;
     }
@@ -17,7 +19,7 @@ public class ChinaBank extends Bank {
         @Override
         int getLimitOfFunding () {
         int limitF = 0;
-        if (this.getCurrency() .equals(Currency.USD)) limitF = 10000;
+        if (this.getCurrency() .equals(USD)) limitF = 10000;
         if (this.getCurrency() .equals(Currency.EUR));
         return limitF;
 
@@ -25,15 +27,15 @@ public class ChinaBank extends Bank {
         @Override
         int getMonthlyRate () {
         int monthlyRate = 0;
-        if (this.getCurrency() .equals(Currency.USD)) monthlyRate = 1;
-        if (this.getCurrency() .equals(Currency.EUR)) monthlyRate = 2;
+        if (this.getCurrency() .equals(USD)) monthlyRate = (1/100);
+        if (this.getCurrency() .equals(Currency.EUR)) monthlyRate = (2/100);
         return monthlyRate;
     }
 
         @Override
         int getCommision ( double withdraw){
         int commision = 0;
-        if (this.getCurrency() .equals(Currency.USD)) {
+        if (this.getCurrency() .equals(USD)) {
             if (withdraw <= 1000) commision = 30;
             else commision = 50;
         }
