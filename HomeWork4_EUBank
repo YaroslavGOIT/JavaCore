@@ -26,8 +26,8 @@ package Module_4;
         @Override
         int getMonthlyRate() {
             int monthlyRate=0;
-            if(this.getCurrency().equals(Currency.USD))monthlyRate=1;
-            if(this.getCurrency().equals(Currency.EUR))monthlyRate=2;
+            if(this.getCurrency().equals(Currency.USD))monthlyRate = (1/100);
+            if(this.getCurrency().equals(Currency.EUR))monthlyRate = (2/100);
             return monthlyRate;
         }
 
