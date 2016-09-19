@@ -25,23 +25,23 @@ public class ChinaBank extends Bank {
 
     }
         @Override
-        int getMonthlyRate () {
-        int monthlyRate = 0;
-        if (this.getCurrency() .equals(USD)) monthlyRate = (1/100);
-        if (this.getCurrency() .equals(Currency.EUR)) monthlyRate = (2/100);
+        double getMonthlyRate () {
+        double monthlyRate = 0;
+        if (this.getCurrency() .equals(USD)) monthlyRate = 0.01;
+        if (this.getCurrency() .equals(Currency.EUR)) monthlyRate = 0;
         return monthlyRate;
     }
 
         @Override
-        int getCommision ( double withdraw){
-        int commision = 0;
+        double getCommision ( double withdraw){
+        double commision = 0;
         if (this.getCurrency() .equals(USD)) {
-            if (withdraw <= 1000) commision = 30;
-            else commision = 50;
+            if (withdraw <= 1000) commision = 0.03;
+            else commision = 0.05;
         }
         if (this.getCurrency() .equals(Currency.EUR)) {
-            if (withdraw <= 1000) commision = 100;
-            else commision = 110;
+            if (withdraw <= 1000) commision = 0.01;
+            else commision = 0.11;
 
         }
             return commision;
