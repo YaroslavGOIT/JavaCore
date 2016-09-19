@@ -1,47 +1,52 @@
 package Module_4;
 
-    public class EUBank extends Bank {
-        public EUBank(long id, Currency currency, int numberOfEmployee, double avrSalaryOfEmploee, long rating, long totalCapital) {
-            super(id, currency, numberOfEmployee, avrSalaryOfEmploee, rating, totalCapital);
-        }
+import static Module_4.Currency.USD;
 
+public class ChinaBank extends Bank {
+     public ChinaBank(long id, Currency currency,int numberOfEmployee, double avrSalaryOfEmploee, long rating, long totalCapital){
+        super(id, currency, numberOfEmployee, avrSalaryOfEmploee, rating, totalCapital);
+    }
 
 
         @Override
-        int getLimitOfWithdrawal() {
-            short limitW=0;
-            if(this.getCurrency().equals(Currency.USD))limitW = 2000;
-            if(this.getCurrency().equals(Currency.EUR))limitW = 2200;
-            return limitW;
-        }
+        int getLimitOfWithdrawal () {
+        short limitW = 0;
+        if (this.getCurrency() .equals(USD)) limitW = 100;
+        if (this.getCurrency() .equals(Currency.EUR)) limitW = 150;
+        return limitW;
+    }
 
         @Override
-        int getLimitOfFunding() {
-            int limitF=0;
-            if(this.getCurrency().equals(Currency.USD))limitF = 10000;
-            if(this.getCurrency().equals(Currency.EUR))limitF = 20000;
-            return limitF;
-        }
+        int getLimitOfFunding () {
+        int limitF = 0;
+        if (this.getCurrency() .equals(USD)) limitF = 10000;
+        if (this.getCurrency() .equals(Currency.EUR));
+        return limitF;
+
+    }
+        @Override
+        double getMonthlyRate () {
+        double monthlyRate = 0;
+        if (this.getCurrency() .equals(USD)) monthlyRate = 0.01;
+        if (this.getCurrency() .equals(Currency.EUR)) monthlyRate = 0;
+        return monthlyRate;
+    }
 
         @Override
-        int getMonthlyRate() {
-            int monthlyRate=0;
-            if(this.getCurrency().equals(Currency.USD))monthlyRate = (1/100);
-            if(this.getCurrency().equals(Currency.EUR))monthlyRate = (2/100);
-            return monthlyRate;
+        double getCommision ( double withdraw){
+        double commision = 0;
+        if (this.getCurrency() .equals(USD)) {
+            if (withdraw <= 1000) commision = 0.03;
+            else commision = 0.05;
         }
+        if (this.getCurrency() .equals(Currency.EUR)) {
+            if (withdraw <= 1000) commision = 0.01;
+            else commision = 0.11;
 
-        @Override
-        int getCommision(double withdraw) {
-            int commision=0;
-            if(this.getCurrency().equals(Currency.USD)){
-                if(withdraw<=1000)commision=50;
-                else commision=70;
-            }
-            if(this.getCurrency().equals(Currency.EUR)){
-                if(withdraw<=1000)commision=20;
-                else commision=40;
-            }
+        }
             return commision;
         }
-}
+    }
+
+
+
