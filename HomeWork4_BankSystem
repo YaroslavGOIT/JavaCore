@@ -1,6 +1,5 @@
 package Module_4;
-
-public abstract interface BankSystem{
+ interface BankSystem{
     public abstract void withdrawOfUser(User user, int amount);
 
     public abstract void fundUser(User user, int amount);
