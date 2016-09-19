@@ -45,6 +45,6 @@ public class USBank extends Bank{
             if(withdraw<=1000)commision = 0.06;
             else commision = 0.08;
         }
-        return (int) commision;
+        return commision;
     }
 }
