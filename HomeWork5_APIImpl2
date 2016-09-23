@@ -2,7 +2,7 @@ package Module_5;
 
 
 import java.util.Date;
-class APIImpl2 implements API {
+class GoogleAPI implements API {
     private Room rooms[];
     APIImpl2() {
         Room rg1=new Room(13451L,124,5,new Date(12,325,4),"Vitek","Bubka");
