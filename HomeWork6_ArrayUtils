@@ -28,7 +28,7 @@ public class ArrayUtils {
     public static int[] reverse(int[] array){
         int forReverse=array.length-1;
         int[] getReverseArray=new int[forReverse+1];
-        for(short i=0;i<=forReverse;i++){
+        for(short i=0;i<=forReverse/2;i++){
             getReverseArray[i]=array[forReverse-i];
         }
         return getReverseArray;
