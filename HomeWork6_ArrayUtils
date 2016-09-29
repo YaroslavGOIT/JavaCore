@@ -2,7 +2,7 @@ package Module_6;
 
 import Module_2.HomeWork2_1Int;
 
- abstract class ArrayUtils {
+ public final class ArrayUtils {
 
     public static int sum(int array[]){
         return HomeWork2_1Int.sum(array);
