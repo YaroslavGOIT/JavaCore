@@ -2,30 +2,30 @@ package Module_6;
 
 import Module_2.HomeWork2_1Int;
 
-public class ArrayUtils {
+ abstract class ArrayUtils {
 
     public static int sum(int array[]){
         return HomeWork2_1Int.sum(array);
     }
-    public static int min(int array[]){
+    static int min(int array[]){
         return HomeWork2_1Int.min(array);
     }
-    public static int max(int array[]){
+    static int max(int array[]){
         return HomeWork2_1Int.max(array);
     }
-    public static int maxPositive(int array[]){
+    static int maxPositive(int array[]){
         return HomeWork2_1Int.maxPositive(array);
     }
-    public static long multiplication  (int array[]){
+    static long multiplication  (int array[]){
         return HomeWork2_1Int.multiplication(array);
     }
-    public static int modulus(int array[]){
+    static int modulus(int array[]){
         return HomeWork2_1Int.modulus(array);
     }
-    public static int secondLargest(int array[]){
+    static int secondLargest(int array[]){
         return HomeWork2_1Int.secondLargest(array);
     }
-    public static int[] reverse(int[] array){
+    static int[] reverse(int[] array){
         int forReverse=array.length-1;
         int[] getReverseArray=new int[forReverse+1];
         for(short i=0;i<=forReverse/2;i++){
