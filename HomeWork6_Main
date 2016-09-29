@@ -12,6 +12,7 @@ public class Main {
         User[] users=new User[]{us1,us2,us3,us4,us5};
 
         users=UserUtils.uniqueUsers(users);
+        lop(UserUtils.deleteEmptyUsers(users));
         lop(UserUtils.paySalaryToUsers(users));
         lop(x.usersWithConditionalBalance(users,63140));
 
