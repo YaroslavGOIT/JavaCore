@@ -1,7 +1,5 @@
 package Module_5;
-
 import java.util.Date;
-
 public class Room {
     private long id;
     private int price;
@@ -24,19 +22,25 @@ public class Room {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Room Room = (Room) o;
+        Room room = (Room) o;
 
-        return (this.price == Room.getPrice()
-                && this.persons == Room.getPersons()
-                && this.cityName.equals(Room.getCityName())
-        );
+        if (id != room.id) return false;
+        if (price != room.price) return false;
+        if (persons != room.persons) return false;
+        if (dateAvailableFrom != null ? !dateAvailableFrom.equals(room.dateAvailableFrom) : room.dateAvailableFrom != null)
+            return false;
+        if (hotelName != null ? !hotelName.equals(room.hotelName) : room.hotelName != null) return false;
+        return cityName != null ? cityName.equals(room.cityName) : room.cityName == null;
 
     }
 
     @Override
     public int hashCode() {
-        int result = price;
+        int result = (int) (id ^ (id >>> 32));
+        result = 31 * result + price;
         result = 31 * result + persons;
+        result = 31 * result + (dateAvailableFrom != null ? dateAvailableFrom.hashCode() : 0);
+        result = 31 * result + (hotelName != null ? hotelName.hashCode() : 0);
         result = 31 * result + (cityName != null ? cityName.hashCode() : 0);
         return result;
     }
