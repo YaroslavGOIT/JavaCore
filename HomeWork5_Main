@@ -1,21 +1,21 @@
-package Homework.Module5;
+
+package Module_5;
+
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         Controller cntrl=new Controller();
-        loop(cntrl.requestRooms(124,5,"Vitek","P"));
+        loop(cntrl.requestRooms(124,5,"Mistoland","IUGYAse"));
         loop(cntrl.check(new BookingComAPI(),new GoogleAPI()));
-        loop(cntrl.requestRooms(345,7,"Vitek","P"));
-        loop(cntrl.check(new BookingComAPI(),new GoogleAPI()));
-        loop(cntrl.requestRooms(556,1,"Vitek","P"));
-        loop(cntrl.check(new BookingComAPI(),new GoogleAPI()));
+
     }
 
-    static void loop(Room[] rooms) {
+    static void loop(List<Room> rooms) {
         for (Room elements : rooms) {
             if(elements!=null)
-            System.out.println(elements);
+                System.out.println(elements);
         }
-        System.out.println("-----------------\n");
+        System.out.println("===================================================================\n");
     }
 }
