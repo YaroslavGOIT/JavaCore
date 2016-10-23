@@ -4,7 +4,7 @@ package Module_8;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class AbstractDAOImpl<T> implements AbstractDAO<T>{
+public class AbstractDAOImpl<T> implements AbstractDAO<T>{
     @Override
     public T save(T obj) {
         System.out.println("Saved: "+obj);
@@ -33,5 +33,16 @@ public abstract class AbstractDAOImpl<T> implements AbstractDAO<T>{
     @Override
     public List<T> getList() {
         return new ArrayList<T>();
+    }
+
+    @Override
+    public void deleteById(long id) {
+        /*for(T el: ){
+        }*/
+    }
+
+    @Override
+    public T get(long id) {
+        return null;
     }
 }
