@@ -1,13 +1,23 @@
 package Module_10;
 
-public class ClassWithException {
-    public static void main(String[] args) throws Exception{
+public class Task10_5 {
+    public static void main(String[] args) {
         try{
-            throw new Exception("Massage with error");
-        } catch (Throwable e){
+            thirdError();
+            secondError();
+            firstError();
+        } catch (Exception1 e){
             System.err.println(e.getMessage());
-        }finally {
-            System.out.println("In finally block");
         }
     }
+    private static void firstError()throws Exception1{
+        throw new Exception1("First exception");
+    }
+    private static void secondError()throws Exception2{
+        throw new Exception2("Second exception");
+    }
+    private static void thirdError()throws Exception3{
+        throw new Exception3("Third exception");
+    }
+
 }
