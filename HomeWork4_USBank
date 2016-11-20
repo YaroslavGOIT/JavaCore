@@ -1,0 +1,50 @@
+package Module_4;
+
+/**
+ * Created by admin-pc on 17.09.2016.
+ */
+public class USBank extends Bank{
+
+    public USBank(long id, Currency currency, int numberOfEmployee, double avrSalaryOfEmploee, long rating, long totalCapital) {
+        super(id, currency, numberOfEmployee, avrSalaryOfEmploee, rating, totalCapital);
+    }
+
+
+    @Override
+    int getLimitOfWithdrawal() {
+        short limitW=0;
+        if(this.getCurrency().equals(Currency.USD))limitW = 1000;
+        if(this.getCurrency().equals(Currency.EUR))limitW = 1200;
+        return limitW;
+    }
+
+    @Override
+    int getLimitOfFunding() {
+        int limitF=0;
+        if(this.getCurrency().equals(Currency.USD))limitF = 2147483647;
+        if(this.getCurrency().equals(Currency.EUR))limitF = 10000;
+        return limitF;
+    }
+
+    @Override
+    double getMonthlyRate() {
+        double monthlyRate=0;
+        if(this.getCurrency().equals(Currency.USD))monthlyRate = 0.01;
+        if(this.getCurrency().equals(Currency.EUR))monthlyRate = 0.02;
+        return monthlyRate;
+    }
+
+    @Override
+    double getCommision(double withdraw) {
+        double commision=0;
+        if(this.getCurrency().equals(Currency.USD)){
+            if(withdraw<=1000)commision = (int) 0.05;
+            else commision = 0.07;
+        }
+        if(this.getCurrency().equals(Currency.EUR)){
+            if(withdraw<=1000)commision = 0.06;
+            else commision = 0.08;
+        }
+        return commision;
+    }
+}

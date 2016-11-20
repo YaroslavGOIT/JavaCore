@@ -1,0 +1,27 @@
+package Module_3.HomeWork3_3;
+
+import java.util.Date;
+
+/**
+ * Created by admin-pc on 09.09.2016.
+ */
+public class Solution {
+    public static void main(String[] argc){
+        Course startDate = new Course();
+        Course teacherName = new Course();
+        Course name = new Course();
+        Course hoursDuration = new Course();
+
+        Student coursesTaken  = new Student();
+        Student firstName = new Student();
+        Student lastName = new Student();
+        Student group = new Student();
+
+        CollegeStudent collegeName = new CollegeStudent();
+        CollegeStudent rating = new CollegeStudent();
+        CollegeStudent id = new CollegeStudent();
+
+        SpecialStudent secretKey = new SpecialStudent();
+        SpecialStudent email = new SpecialStudent();
+    }
+}

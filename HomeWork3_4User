@@ -1,0 +1,92 @@
+package Module_3.HomeWork3_4;
+
+/**
+ * Created by admin-pc on 11.09.2016.
+ */
+public class User {
+    String name ;
+    int balance ;
+    int monthsOfEmployment ;
+    String companyName;
+    int salary;
+    String currency;
+
+    void paySalary(){
+        salary += balance;
+    }
+
+    void withdraw(int sum){
+        int comision = 0;
+        if (sum < 1000){
+            comision = (int) (sum * 0.05);
+            balance = balance - comision;
+        } else {
+            comision = (int) (sum * 0.1);
+            balance = balance - comision;
+        }
+    }
+
+    int companyNameLenfht(){
+        return companyName.length();
+    }
+
+    void monthIncreaser(int addMonth){
+        monthsOfEmployment += addMonth;
+    }
+
+    public User(String name, int balance, int monthsOfEmployment, String companyName, int salary, String currency){
+        this.name = name;
+        this.balance = balance;
+        this.monthsOfEmployment = monthsOfEmployment;
+        this.companyName = companyName;
+        this.salary = salary;
+        this.currency = currency;
+    }
+
+    void setName(String name) {
+        this.name = name;
+    }
+
+    String getName() {
+        return name;
+    }
+    void balance(int balance) {
+        this.balance = balance;
+    }
+
+    int getBalance() {
+        return balance;
+    }
+
+    void setMonthsOfEmployment(int monthsOfEmployment){
+        this.monthsOfEmployment = monthsOfEmployment;
+    }
+
+    int getMonthsOfEmployment(){
+        return monthsOfEmployment;
+    }
+
+    void setCompanyName(String companyName){
+        this.companyName = companyName;
+    }
+
+    int getCompanyName(){
+        return companyName.length();
+    }
+
+    void setSalary(int salary){
+        this.salary = salary;
+    }
+
+    int getSalary(){
+        return salary;
+    }
+
+    void setCurrency(String currency){
+        this.currency = currency;
+    }
+
+    int getCurrency(){
+        return currency.length();
+    }
+}
