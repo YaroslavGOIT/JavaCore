@@ -6,6 +6,8 @@ public class ClassWithException {
             throw new Exception("Massage with error");
         } catch (Throwable e){
             System.err.println(e.getMessage());
+        }finally {
+            System.out.println("In finally block");
         }
     }
 }
